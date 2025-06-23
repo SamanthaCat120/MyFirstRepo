@@ -47,7 +47,7 @@ function convertButtonClicked() {
       const celsius = parseFloat(celsInput.value);
       if (!isNaN(celsius)) {
          fahr = convertCtoF(celsius);
-         fahrInput.value = fahr.toFixed(2);
+         fahrInput.value = fahr;
       } else {
          errMsg.innerHTML = celsInput.value + " is not a valid number";
          return;
@@ -56,7 +56,7 @@ function convertButtonClicked() {
       const fahrenheit = parseFloat(fahrInput.value);
       if (!isNaN(fahrenheit)) {
          fahr = fahrenheit;
-         celsInput.value = convertFtoC(fahrenheit).toFixed(2);
+         celsInput.value = convertFtoC(fahrenheit);
       } else {
          errMsg.innerHTML = fahrInput.value + " is not a valid number";
          return;
